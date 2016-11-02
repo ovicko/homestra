@@ -61,15 +61,7 @@
         android:layout_toRightOf="@+id/room_images"
         android:textSize="@dimen/bedRooms" />
 
-    <TextVie
-    android:id="@+id/datePosted"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/roomId"
-    android:layout_marginTop="1dip"
-    android:layout_toRightOf="@+id/room_images"
-    android:textSize="@dimen/datePosted" />
-<!-- Room Cost -->
+    <!-- Room Cost -->
     <TextView
         android:id="@+id/room_cost"
         android:layout_width="wrap_content"
