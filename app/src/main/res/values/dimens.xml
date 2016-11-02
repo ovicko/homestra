@@ -1,0 +1,9 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="room_title">17dp</dimen>
+    <dimen name="room_desc">15sp</dimen>
+    <dimen name="contact_phone">13sp</dimen>
+    <dimen name="room_cost">12sp</dimen>
+</resources>
