@@ -25,8 +25,8 @@
         android:textStyle="bold" />
 
     <!-- Rating -->
-    <TextView
-        android:id="@+id/room_desc"
+   <TextView
+        android:id="@+id/theRoomDesc"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/room_title"
@@ -37,7 +37,7 @@
         android:id="@+id/contact_phone"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/room_desc"
+        android:layout_below="@id/theRoomDesc"
         android:layout_marginTop="5dp"
         android:textColor="@color/genre"
         android:textSize="@dimen/contact_phone" />
@@ -61,13 +61,6 @@
         android:textSize="@dimen/room_cost"
         android:layout_below="@id/contact_phone"/>
 
-    <TextView
-        android:id="@+id/roomId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/year"
-        android:textSize="@dimen/room_cost"
-        android:layout_below="@id/bedRooms"/>
 
     <TextView
         android:id="@+id/room_url"
@@ -75,7 +68,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/year"
         android:textSize="@dimen/room_cost"
-        android:layout_below="@id/roomId"/>
+        android:layout_below="@id/bedRooms"/>
 
     <TextView
         android:id="@+id/datePosted"
@@ -84,6 +77,14 @@
         android:textColor="@color/year"
         android:textSize="@dimen/room_cost"
         android:layout_below="@id/room_url"/>
+    <TextView
+        android:id="@+id/theRoomTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/year"
+        android:textSize="@dimen/room_cost"
+        android:layout_below="@id/datePosted"/>
+
 
 
 

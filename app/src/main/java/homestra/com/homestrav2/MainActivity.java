@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView listView;
     private CustomListAdapter adapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,43 +55,12 @@ public class MainActivity extends AppCompatActivity {
         adapter = new CustomListAdapter(this, roomList);
         listView.setAdapter(adapter);
 
-        //capture listview click
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                String room_title = ((TextView) view.findViewById(R.id.room_title)).getText().toString();
-                String room_desc = ((TextView) view.findViewById(R.id.room_desc)).getText().toString();
-                String room_cost = ((TextView) view.findViewById(R.id.room_cost)).getText().toString();
-                String contact_phone = ((TextView) view.findViewById(R.id.contact_phone)).getText().toString();
-                String bedRooms = ((TextView) view.findViewById(R.id.bedRooms)).getText().toString();
-                String roomId = ((TextView) view.findViewById(R.id.roomId)).getText().toString();
-                String datePosted = ((TextView) view.findViewById(R.id.datePosted)).getText().toString();
-
-                String roomImages = ((Room)roomList.get(position)).getRoomImagesUrl();
-                Intent i = new Intent(getApplicationContext(),SingleRoomView.class);
-                i.putExtra("room_title",room_title);
-                i.putExtra("room_desc",room_desc);
-                i.putExtra("room_cost",room_cost);
-                i.putExtra("contact_phone",contact_phone);
-                i.putExtra("position",position);
-                i.putExtra("room_images",roomImages);
-                i.putExtra("bed_rooms",bedRooms);
-                i.putExtra("room_id",roomId);
-                i.putExtra("date_posted",datePosted);
-                //open singleroom view
-                startActivity(i);
-            }
-        });
 
         pDialog = new ProgressDialog(this);
         // Showing progress dialog before making http request
         pDialog.setMessage("Loading...");
         pDialog.show();
-
-        // changing action bar color
-
-
         // Creating volley request obj
         JsonArrayRequest movieReq = new JsonArrayRequest(url,
                 new Response.Listener<JSONArray>() {
@@ -112,9 +82,7 @@ public class MainActivity extends AppCompatActivity {
                                 room.setRoomId(obj.getInt("room_id"));
                                 room.setPhone(((String) obj.get("contact_phone")));
                                 room.setBedRooms(obj.getString("bed_rooms"));
-                               room.setDatePosted(obj.getString("date_posted"));
-
-
+                                room.setDatePosted(obj.getString("date_posted"));
                                 // adding room to rooms array
                                 roomList.add(room);
 
@@ -123,14 +91,9 @@ public class MainActivity extends AppCompatActivity {
                             }
 
                         }
-
                         // notifying list adapter about data changes
                         // so that it renders the list view with updated data
                         adapter.notifyDataSetChanged();
-
-
-
-
 
                     }
                 }, new Response.ErrorListener() {
@@ -139,6 +102,36 @@ public class MainActivity extends AppCompatActivity {
                 VolleyLog.d(TAG, "Error: " + error.getMessage());
                 hidePDialog();
 
+            }
+        });
+
+        //capture listview click
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                //String room_title = ((TextView) view.findViewById(R.id.room_title)).getText().toString();
+                //String room_desc = ((TextView) view.findViewById(R.id.room_desc)).getText().toString();
+                //String room_cost = ((TextView) view.findViewById(R.id.room_cost)).getText().toString();
+                //String contact_phone = ((TextView) view.findViewById(R.id.contact_phone)).getText().toString();
+                //String bedRooms = ((TextView) view.findViewById(R.id.bedRooms)).getText().toString();
+                String roomId = ((TextView) view.findViewById(R.id.roomId)).getText().toString();
+                //String datePosted = ((TextView) view.findViewById(R.id.datePosted)).getText().toString();
+
+                String roomImages = roomList.get(position).getRoomImagesUrl();
+                Intent i = new Intent(getApplicationContext(),SingleRoomView.class);
+                //i.putExtra("room_title",room_title);
+                //i.putExtra("room_desc",room_desc);
+                //i.putExtra("room_cost",room_cost);
+                //i.putExtra("contact_phone",contact_phone);
+                i.putExtra("position",position);
+                i.putExtra("room_images",roomImages);
+                //i.putExtra("bed_rooms",bedRooms);
+                i.putExtra("room_id",roomId);
+                //i.putExtra("date_posted",datePosted);
+
+                //open singleroom view
+                startActivity(i);
             }
         });
 

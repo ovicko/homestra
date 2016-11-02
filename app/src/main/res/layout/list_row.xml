@@ -15,6 +15,14 @@
         android:layout_marginRight="8dp"
         android:layout_marginEnd="8dp"/>
 
+    <TextView
+        android:id="@+id/roomId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/room_title"
+        android:visibility="invisible"
+        android:textStyle="bold" />
+
     <!-- Movie Title -->
     <TextView
         android:id="@+id/room_title"
@@ -53,15 +61,7 @@
         android:layout_toRightOf="@+id/room_images"
         android:textSize="@dimen/bedRooms" />
 
-    <TextView
-        android:id="@+id/roomId"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/bedRooms"
-        android:layout_marginTop="1dip"
-        android:layout_toRightOf="@+id/room_images"
-        android:textSize="@dimen/roomId" />
-    <TextView
+    <TextVie
     android:id="@+id/datePosted"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
     android:layout_marginTop="1dip"
     android:layout_toRightOf="@+id/room_images"
     android:textSize="@dimen/datePosted" />
-    <!-- Room Cost -->
+<!-- Room Cost -->
     <TextView
         android:id="@+id/room_cost"
         android:layout_width="wrap_content"

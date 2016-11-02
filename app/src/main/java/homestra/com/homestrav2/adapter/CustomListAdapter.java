@@ -65,7 +65,7 @@ public class CustomListAdapter extends BaseAdapter {
         TextView room_cost = (TextView) convertView.findViewById(R.id.room_cost);
         TextView bedrooms = (TextView) convertView.findViewById(R.id.bedRooms);
         TextView roomid = (TextView) convertView.findViewById(R.id.roomId);
-        TextView dateposted = (TextView) convertView.findViewById(R.id.datePosted);
+       // TextView dateposted = (TextView) convertView.findViewById(R.id.datePosted);
 
         // getting room data for the row
         Room m = roomItems.get(position);
@@ -83,8 +83,8 @@ public class CustomListAdapter extends BaseAdapter {
         // room_county
         contact_phone.setText(String.valueOf(m.getPhone()));
         // release room_cost
-        room_cost.setText("KSH  " +String.valueOf(m.getCost()));
-        dateposted.setText(String.valueOf(m.getDatePosted()));
+        room_cost.setText("KSH "+String.valueOf(m.getCost()));
+        //dateposted.setText(String.valueOf(m.getDatePosted()));
 
         return convertView;
     }

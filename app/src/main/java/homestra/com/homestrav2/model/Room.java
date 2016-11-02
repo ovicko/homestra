@@ -1,5 +1,7 @@
 package homestra.com.homestrav2.model;
 
+import org.json.JSONObject;
+
 /**
  * Created by ovicko on 28/10/2016.
  */
@@ -92,5 +94,6 @@ public class Room {
     public void setPhone(String contact_phone) {
         this.contact_phone = contact_phone;
     }
+
 
 }
