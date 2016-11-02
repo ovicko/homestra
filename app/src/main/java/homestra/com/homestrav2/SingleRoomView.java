@@ -53,6 +53,7 @@ public class SingleRoomView extends AppCompatActivity{
         position = i.getExtras().getInt("position");
         String room_id = i.getStringExtra("room_id");
         String roomImages = i.getStringExtra("room_images");
+        //the roomid is required to call a specific room by its id
         String theurl = "http://jambohome.api.ovicko.com/advancedkeja/api/web/room1s/" +room_id;
 
         //load the text into the text views

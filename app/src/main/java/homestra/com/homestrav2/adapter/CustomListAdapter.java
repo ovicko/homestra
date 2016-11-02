@@ -80,7 +80,7 @@ public class CustomListAdapter extends BaseAdapter {
         // room_desc
         room_desc.setText(String.valueOf(m.getDescription()));
 
-        // room_county
+        // contact phone
         contact_phone.setText(String.valueOf(m.getPhone()));
         // release room_cost
         room_cost.setText("KSH "+String.valueOf(m.getCost()));
