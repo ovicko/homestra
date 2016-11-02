@@ -10,8 +10,10 @@
         android:id="@+id/room_images"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginRight="8dp" />
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"/>
 
     <!-- Movie Title -->
     <TextView
@@ -20,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/room_images"
         android:layout_toRightOf="@+id/room_images"
+        android:layout_toEndOf="@+id/room_images"
         android:textSize="@dimen/room_title"
         android:textStyle="bold" />
 
@@ -34,6 +37,7 @@
         android:layout_below="@id/room_title"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/room_images"
+        android:layout_toEndOf="@id/room_images"
         android:textSize="@dimen/room_desc" />
 
     <!-- Genre -->
@@ -44,6 +48,7 @@
         android:layout_below="@id/room_desc"
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@+id/room_images"
+        android:layout_toEndOf="@id/room_images"
         android:textColor="@color/genre"
         android:textSize="@dimen/contact_phone" />
     <TextView
@@ -53,7 +58,8 @@
         android:layout_below="@id/contact_phone"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/room_images"
-        android:textSize="@dimen/room_desc" />
+        android:layout_toEndOf="@id/room_images"
+        android:textSize="@dimen/bedRooms" />
 
     <TextView
         android:id="@+id/roomId"
@@ -62,7 +68,8 @@
         android:layout_below="@id/bedRooms"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/room_images"
-        android:textSize="@dimen/room_desc" />
+        android:layout_toEndOf="@id/room_images"
+        android:textSize="@dimen/roomId" />
     <!-- Room Cost -->
     <TextView
         android:id="@+id/room_cost"
@@ -70,6 +77,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@id/room_images"
+        android:layout_toEndOf="@id/room_images"
         android:textColor="@color/year"
         android:textSize="@dimen/room_cost" />
     <TextView
@@ -79,6 +89,7 @@
         android:layout_below="@id/roomId"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/room_images"
-        android:textSize="@dimen/room_desc" />
+        android:layout_toEndOf="@id/room_images"
+        android:textSize="@dimen/datePosted" />
 
 </RelativeLayout>
