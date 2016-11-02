@@ -22,13 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/room_images"
         android:layout_toRightOf="@+id/room_images"
-        android:layout_toEndOf="@+id/room_images"
         android:textSize="@dimen/room_title"
         android:textStyle="bold" />
-
-    <!-- Rating -->
-
-
     <!-- Rating -->
     <TextView
         android:id="@+id/room_desc"
@@ -37,7 +32,6 @@
         android:layout_below="@id/room_title"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/room_images"
-        android:layout_toEndOf="@id/room_images"
         android:textSize="@dimen/room_desc" />
 
     <!-- Genre -->
@@ -48,7 +42,6 @@
         android:layout_below="@id/room_desc"
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@+id/room_images"
-        android:layout_toEndOf="@id/room_images"
         android:textColor="@color/genre"
         android:textSize="@dimen/contact_phone" />
     <TextView
@@ -58,7 +51,6 @@
         android:layout_below="@id/contact_phone"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/room_images"
-        android:layout_toEndOf="@id/room_images"
         android:textSize="@dimen/bedRooms" />
 
     <TextView
@@ -68,8 +60,15 @@
         android:layout_below="@id/bedRooms"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/room_images"
-        android:layout_toEndOf="@id/room_images"
         android:textSize="@dimen/roomId" />
+    <TextView
+    android:id="@+id/datePosted"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/roomId"
+    android:layout_marginTop="1dip"
+    android:layout_toRightOf="@+id/room_images"
+    android:textSize="@dimen/datePosted" />
     <!-- Room Cost -->
     <TextView
         android:id="@+id/room_cost"
@@ -77,19 +76,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@id/room_images"
-        android:layout_toEndOf="@id/room_images"
         android:textColor="@color/year"
         android:textSize="@dimen/room_cost" />
-    <TextView
-        android:id="@+id/datePosted"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/roomId"
-        android:layout_marginTop="1dip"
-        android:layout_toRightOf="@+id/room_images"
-        android:layout_toEndOf="@id/room_images"
-        android:textSize="@dimen/datePosted" />
+
 
 </RelativeLayout>
